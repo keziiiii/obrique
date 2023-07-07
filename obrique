@@ -1,0 +1,42 @@
+const NFTs = [
+    {
+        item: "♠️",
+        name: "spade"
+    },
+    {
+        item: "♣️",
+        name: "Club"
+    }
+]
+
+function mintNFT(nft) {
+    NFTs.push(nft)
+    return nft;
+}
+
+function listNFTs() {
+    NFTs.forEach(nft => {
+        console.log(nft);
+    })
+}
+
+function getTotalSupply() {
+    console.log(" Total Supply: " + NFTs.length)
+}
+
+// call your functions below this line
+
+// listNFTs()
+
+mintNFT({
+    item: "♦️",
+    name: "Diamond"
+})
+mintNFT({
+    item: "♥️",
+    name: "Heart"
+})
+
+listNFTs()
+
+getTotalSupply()
